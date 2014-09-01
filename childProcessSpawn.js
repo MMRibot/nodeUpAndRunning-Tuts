@@ -26,3 +26,21 @@ cat.on('exit', function(){
 // we can send our new child data by using the 'child.stdin' stream. This is just a regular writable stream
 cat.stdin.write('meow');
 cat.stdin.end();
+
+
+// this example was taken form the nodejs.org website for child_process.spawn()
+
+var spawn = require('child_process').spawn,
+    ls    = spawn('ls', ['-lh', '/usr']);
+
+ls.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
+
+ls.stderr.on('data', function (data) {
+  console.log('stderr: ' + data);
+});
+
+ls.on('close', function (code) {
+  console.log('child process exited with code ' + code);
+});
