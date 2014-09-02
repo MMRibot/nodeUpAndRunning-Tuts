@@ -5,6 +5,8 @@ var app = express.createServer();
 // until we've finished evaluating the code of the existing loops pass.
 // In this case no resquest events will ba called until we've evaluated all the
 // initialization code in the file.
+
+// Of course this is a simplefied version of Twitter.
 app.listen(8000);
 
 var tweets = [ ];
