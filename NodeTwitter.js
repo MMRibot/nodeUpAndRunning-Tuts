@@ -1,3 +1,5 @@
+// This is a simplefied version of Twitter.
+
 var express = require('express');
 var app = express.createServer();
 
@@ -6,7 +8,6 @@ var app = express.createServer();
 // In this case no resquest events will ba called until we've evaluated all the
 // initialization code in the file.
 
-// Of course this is a simplefied version of Twitter.
 app.listen(8000);
 
 var tweets = [ ];
